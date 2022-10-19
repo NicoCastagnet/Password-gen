@@ -1,5 +1,6 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -22,20 +23,22 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.gen-container h2{
+.gen-container h2 {
   font-weight: 600;
   font-size: 1.31rem;
   padding: 1rem 1.75rem;
   border-bottom: 1px solid #d4dbe5;
 }
 
-.wrapper{
+.gen-wrapper {
   margin: 1.25rem 1.75rem;
 }
-.wrapper .input-box{
+
+.gen-wrapper .gen-pwd-input {
   position: relative;
 }
-.input-box input{
+
+.gen-pwd-input input {
   width: 100%;
   height: 53px;
   color: #000;
@@ -47,17 +50,20 @@ body {
   border: 1px solid #aaa;
   padding: 0 2.85rem 0 1rem;
 }
-.input-box span{
+
+.gen-pwd-input span {
   position: absolute;
   right: 13px;
   cursor: pointer;
   line-height: 53px;
   color: #707070;
 }
-.input-box span:hover{
+
+.gen-pwd-input span:hover {
   color: #4285F4!important;
 }
-.wrapper .pass-indicator{
+
+.gen-wrapper .gen-pwd-indicator {
   width: 100%;
   height: 4px;
   position: relative;
@@ -65,7 +71,8 @@ body {
   margin-top: 0.75rem;
   border-radius: 25px;
 }
-.pass-indicator::before{
+
+.gen-pwd-indicator::before {
   position: absolute;
   content: "";
   height: 100%;
@@ -73,58 +80,70 @@ body {
   border-radius: inherit;
   transition: width 0.3s ease;
 }
-.pass-indicator#weak::before{
+
+.gen-pwd-indicator#weak::before {
   width: 20%;
   background: #E64A4A;
 }
-.pass-indicator#medium::before{
+
+.gen-pwd-indicator#medium::before {
   width: 50%;
   background: #f1c80b;
 }
-.pass-indicator#strong::before{
+
+.gen-pwd-indicator#strong::before {
   width: 100%;
   background: #4285F4;
 }
-.wrapper .pass-length{
+
+.gen-wrapper .gen-pwd-length {
   margin: 1.56rem 0 1.25rem;
 }
-.pass-length .details{
+
+.gen-pwd-length .gen-details {
   display: flex;
   justify-content: space-between;
 }
-.pass-length input{
+
+.gen-pwd-length input {
   width: 100%;
   height: 5px;
 }
-.pass-settings .options{
+
+.gen-pwd-settings .settings-options {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
   margin-top: 1rem;
 }
-.pass-settings .options .option{
+.gen-pwd-settings .settings-options .settings-option {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
   width: calc(100% / 2);
 }
-.options .option:first-child{
+
+.settings-options .settings-option:first-child {
   pointer-events: none;
 }
-.options .option:first-child input{
+
+.settings-options .settings-option:first-child input {
   opacity: 0.7;
 }
-.options .option input{
+
+.settings-options .settings-option input {
   height: 16px;
   width: 16px;
   cursor: pointer;
 }
-.options .option label{
+
+.settings-options .settings-option label {
   cursor: pointer;
   color: #4f4f4f;
   padding-left: 0.63rem;
 }
-.wrapper .generate-btn{
+
+.gen-wrapper .gen-btn {
   width: 100%;
   color: #fff;
   border: none;

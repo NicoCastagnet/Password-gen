@@ -1,12 +1,11 @@
-const lengthSlider = document.querySelector('.pass-length input'),
-  options = document.querySelectorAll('.option input'),
-  copyIcon = document.querySelector('.input-box span'),
-  passwordInput = document.querySelector('.input-box input'),
-  passIndicator = document.querySelector('.pass-indicator'),
-  generateBtn = document.querySelector('.generate-btn');
+const lengthSlider = document.querySelector('.gen-pwd-length input'),
+  options = document.querySelectorAll('.settings-option input'),
+  copyIcon = document.querySelector('.gen-pwd-input span'),
+  passwordInput = document.querySelector('.gen-pwd-input input'),
+  passIndicator = document.querySelector('.gen-pwd-indicator'),
+  generateBtn = document.querySelector('.gen-btn');
 
 const characters = {
-  // object of letters, numbers & symbols
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   numbers: '0123456789',
@@ -69,7 +68,7 @@ const upadatePassIndicator = () => {
 
 const updateSlider = () => {
   // passing slider value as counter text
-  document.querySelector('.pass-length span').innerText = lengthSlider.value;
+  document.querySelector('.gen-pwd-length span').innerText = lengthSlider.value;
   generatePassword();
   upadatePassIndicator();
 };
