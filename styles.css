@@ -13,14 +13,29 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #4285F4;
+  background: linear-gradient(-45deg, #06283D, #06283D, #47B5FF, #DFF6FF);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .gen-container {
   width: 450px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .gen-container h2 {
@@ -60,7 +75,7 @@ body {
 }
 
 .gen-pwd-input span:hover {
-  color: #4285F4!important;
+  color: #06283D!important;
 }
 
 .gen-wrapper .gen-pwd-indicator {
@@ -93,7 +108,7 @@ body {
 
 .gen-pwd-indicator#strong::before {
   width: 100%;
-  background: #4285F4;
+  background: #42f468;
 }
 
 .gen-wrapper .gen-pwd-length {
@@ -135,6 +150,7 @@ body {
   height: 16px;
   width: 16px;
   cursor: pointer;
+  accent-color: #06283D;
 }
 
 .settings-options .settings-option label {
@@ -149,10 +165,16 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  background: #4285F4;
+  background: #06283D;
   font-size: 1.06rem;
   padding: 0.94rem 0;
   border-radius: 5px;
   text-transform: uppercase;
-  margin: 0.94rem 0 1.3rem;
+  margin: 0.94rem 0 0.94rem;
+  transition: all 0.2s ease;
+}
+
+.gen-wrapper .gen-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease;
 }
